@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="pic/2a35dd08b2bc682c20bb43310392a4b0.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="pic/3088022-2.webp" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="pic/8850423000093_3.webp" style="width:100%">
+  
+</div>
+
+  <div class="mySlides fade">
+  <div class="numbertext">4/ 4</div>
+  <img src="pic/8850423000116_1-20230529172036-.jpeg" style="width:100%">
+  
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+
+        
+        <div class="product-list">
+          <div class="product">
+            <img src="pic/2a35dd08b2bc682c20bb43310392a4b0.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>น้ำเหลืองเฮลูบอยเย็นๆมาแล้วจ้า.</p>
+            <p class="price">100 bath</p>
+            
+          
+              
+              <button onclick="increaseQuantity()">ซื้อ</button>
+              <button onclick="decreaseQuantity()">เอาออก</button>
+            </div>
+          <div class="product-list">
+            <div class="product">
+              <img src="pic/3088022-2.webp" alt="Product 1">
+              <h3>Product 2</h3>
+              <p>น้ำเขียวเฮลูบอยเย็นๆมาแล้วจ้า</p>
+              <p class="price">100 bath</p>
+              <button onclick="increaseQuantity()">ซื้อ</button>
+              <button onclick="decreaseQuantity()">เอาออก</button>
+            
+            </div>
+            
+           
+            
+            <div id="cartSummary" class="cart-summary">
+              
+            </div>
+          </div>
+          <div class="product-list">
+            <div class="product">
+              <img src="pic/8850423000093_3.webp" alt="Product 1">
+              <h3>Product 3</h3>
+              <p>น้ำแดงเฮลูบอยเย็นๆมาแล้วจ้า</p>
+              <p class="price">100 bath</p>
+              <button onclick="increaseQuantity()">ซื้อ</button>
+              <button onclick="decreaseQuantity()">เอาออก</button>>
+            </div>
+            
+            
+            
+            <div id="cartSummary" class="cart-summary">
+              
+            </div>
+          </div>
+          <div class="product-list">
+            <div class="product">
+              <img src="pic/8850423000116_1-20230529172036-.jpeg" alt="Product 1">
+              <h3>Product 4</h3>
+              <p>น้ำฟ้าเฮลูบอยเย็นๆมาแล้วจ้า</p>
+              <p class="price">100 bath</p>
+              <button onclick="increaseQuantity()">ซื้อ</button>
+              <button onclick="decreaseQuantity()">เอาออก</button>
+            </div>
+          
+            <div id="cartSummary" class="cart-summary">
+            </div>
+          </div>
+      </div>
+      
+    
+<script src="shopping.js"></script>
+</body>
+
+    <h1>ร้านค้าสินค้า</h1>
+    <p>จำนวนสินค้า: <span id="quantity">0</span></p>
+    <p>ราคารวม: <span id="totalPrice">0</span> บาท</p>
+    <button onclick="increaseQuantity()">เพิ่มจำนวน</button>
+    <button onclick="decreaseQuantity()">ลดจำนวน</button>
+    
+    
+    <title>นโยบายการสั่งซื้อสินค้า</title>
+    <div class ="container" onclick="toggleMessage()">
+      
+      <p>นโยบายการสั่งซื้อสินค้า</p>
+      <div class="hidden" id="message">
+          <p>1.ยินดีต้อนรับสู่ร้านค้าของเรา! โปรดทราบว่าการสั่งซื้อสินค้าของคุณเป็นไปตามเงื่อนไขดังนี้</p>
+          <p>2.โปรดตรวจสอบรายละเอียดสินค้าที่คุณต้องการสั่งซื้อให้ถูกต้องก่อนกดยืนยันการสั่งซื้อ เมื่อคุณกดยืนยันการสั่งซื้อแล้วคุณจะไม่สามารถยกเลิกหรือแก้ไขคำสั่งซื้อได้</p>
+          <p>3.เราจะดำเนินการจัดส่งสินค้าไปยังที่อยู่ที่คุณระบุในขณะที่ทำการสั่งซื้อ โปรดตรวจสอบข้อมูลที่อยู่ให้ถูกต้องเพื่อป้องกันการส่งสินค้าผิดที่อยู่</p>
+          <p>4.หากคุณต้องการคืนสินค้า เรายินดีให้บริการคืนสินค้าภายในระยะเวลาที่กำหนด โปรดอ่านนโยบายการคืนสินค้าของเราเพื่อทราบข้อมูลเพิ่มเติม</p>
+          <p>5.หากคุณมีคำถามเกี่ยวกับนโยบายการสั่งซื้อหรือเกี่ยวกับคำสั่งซื้อของคุณ โปรดติดต่อทีมงานของเราทางอีเมล์หรือหมายเลขโทรศัพท์ที่ระบุในหน้าติดต่อเรา</p>
+          <p>6.โปรดทราบว่านโยบายการสั่งซื้อเป็นไปตามเงื่อนไขที่กำหนดไว้ข้างต้นและอาจมีการเปลี่ยนแปลงได้โดยไม่ต้องแจ้งให้ทราบล่วงหน้า</p>
+      </div>
+  </div>
+ 
+  
+
+      <label for="message">แบบฟอร์มรายละเอียดข้อมูลผู้สั่งซื้อ</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="ok">
+      <input type="submit" value="cancle">
+  </form>
+</html> 
